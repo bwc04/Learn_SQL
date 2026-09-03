@@ -12,7 +12,7 @@ Some courses/websites may use different SQL 'versions':
 
 ***
 ## Kaggle Intro to SQL Course
-***Link | Beginner | Free***
+***Beginner | Free***
 
 SQL version: MySQL
 
