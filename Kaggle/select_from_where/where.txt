@@ -1,0 +1,13 @@
+8/27/26
+Kaggle Learn SQL tutorial
+Course step #2 : SELECT FROM WHERE
+
+Once you have a table to extract from and the columns of information you want, WHERE allows you to add conditionals
+to filter out certain results you don't want
+
+The WHERE Clause is typically formatted like this:
+
+    SELECT * FROM pet_records
+    WHERE species = 'dog'
+
+You can increase the complexity of the WHERE clause by adding AND, OR clauses
