@@ -1,0 +1,24 @@
+8/27/26
+Kaggle Learn SQL tutorial
+Course step #2 : SELECT FROM WHERE
+
+For basic interaction with any data table in SQL, the keywords SELECT and FROM are the fundamentals
+    - SELECT specifies the columns of information you want from data table
+    - FROM specifies the data table you want to extract from
+
+Imagaine you have a table called pet_records. With columns id, pet_name, species.
+To extract the column pet_name from pet_records, it will go something like this:
+
+    SELECT pet_name FROM `pet_records`
+
+You can also select multiple columns by seperating each column by commas:
+
+    SELECT pet_name, species FROM `pet_records`
+
+You scenarios where you want all columsn you can use a *:
+
+    SELECT * FROM `pet_records`
+
+
+* use backticks for the data table name (not required but decent practice)
+* Incase you want to select all columns from a table, use SELECT * FROM ...
