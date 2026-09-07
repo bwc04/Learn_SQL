@@ -1,0 +1,23 @@
+9/4/26
+Kaggle Learn SQL tutorial
+Course step #3: Count
+
+The COUNT clause returns a count of rows that match a certain condition. 
+COUNT can be used to count the number or entries in a column, based on a condition.
+An example of this would be:
+
+    SELECT COUNT(ID)
+    FROM `youtube.youtube_ads_revenue`;
+
+This will return the number of entries in the ID column
+
+The COUNT clause is a example of a aggregate function. Aggregate functions takes values and 
+returns one. Some future examples of aggregate functions include: SUM(), AVG(), MIN(), MAX()
+
+* Note that when using these aggregate functions, if no name is specified for the new column,
+then, it will be named f0...fn.
+
+* To name a column as a result of a aggregate function, use the AS clause:
+
+    SELECT COUNT(ID) AS numIds
+    FROM `youtube.youtube_ads_revenue`;

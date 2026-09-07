@@ -15,3 +15,8 @@ run_configs = bigquery.QueryJobConfig(dry_run=True)
 client = bigquery.Client()
 query_run_job = client.query(scan_query, job_config=run_configs)
 print("This query will process {} bytes.".format(query_run_job.total_bytes_processed))
+
+# for setting up a safety for how much data processed
+safety = 1000 * 1000 # for example say we want a safe 1 mb
+safe_config = bigquery.QueryJobConfig(maximum_bytes_billed=safety)
+safe_query = client.query(scan_query, job_config=safe_config)

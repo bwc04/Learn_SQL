@@ -1,0 +1,29 @@
+9/4/26
+Kaggle Learn SQL tutorial
+Course step #3: Group By and having
+
+The GROUP BY clause and the HAVING clause are typically used in combination.
+The purpose of GROUP BY and HAVING is to ignore groups that don't meet a certain condition
+Take this query for example:
+
+    SELECT 'Ads Revenue _Mn_', COUNT('Date')
+    FROM youtube.youtube_ads_revenue
+    GROUP BY 'Ads Revenue _Mn_'
+    HAVING COUNT('Date') > 1;
+
+This query uses GROUP BY to create a group based of the ads revenue. COUNT counts
+the number of days in date with the same ads revenue. HAVING allows us to filter
+out any ad revenue counts that are distinct. Now we only have a group of ad revenues
+that are seen across multiple days.
+
+* Since GROUP BY is typically used with a aggregate function, GROUP BY has to include all 
+columns that were not passed to a aggregate function. 
+
+    SELECT author, series, COUNT(id)
+    FROM writtenWork.books
+    GROUP BY author
+    HAVING COUNT(id) > 3;
+
+* This query finds the group of authors and book series that they have written where the series had 
+more then 3 sequels. This query will unfortunately not work because series is not included in the 
+GROUP BY.
