@@ -1,0 +1,31 @@
+9/8/26
+Kaggle Learn SQL tutorial
+Course lesson #4: AS
+
+The AS clause can be used to rename columns, also known as aliasing:
+
+    SELECT Animal, COUNT(id) AS num_animals
+    FROM `bigquery-public-data.pet_records.pets`
+    GROUP BY Animal;
+
+The AS clause can also be combined with the WITH clause to perform a "common table expression" (CTE).
+CTE is basically a temporary table created to help split big queries into smaller components.
+
+CTE's have multiple use cases as it can help simplify a complex query down to minute details that make the queries
+alot easier to read and maintain. For example:
+
+    - Say we a table called Animals that represents the animal population in a zoo. 
+    - Say each row is a record of a animal, including it species, age, etc
+    - If we wanted to answer a question about the older animals (say > 5 years) in the zoo
+    - we could create a CTE that contains information regarding older animals:
+
+        WITH senior_animals AS 
+        (
+            SELECT id, name, species
+            FROM `bigquery-public-data.pet_records.pets`
+            WHERE age >= 5
+        );
+    
+    - With the senior_animals CTE, we are able to extract information regarding older animals simply by refering to it
+
+* Note that CTE's only exist inside the query where they are created. They cannot be referenced outside of a seperate query
