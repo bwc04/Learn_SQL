@@ -1,0 +1,17 @@
+9/7/26
+Kaggle Learn SQL tutorial
+Course lesson #4: order by
+
+ORDER BY clause is used to change the order of the results. It sorts the results returned by the query
+by your chosen column. This can apply to numbers, strings, dates. It typically looks in this order
+
+    SELECT id, name, animal
+    FROM `bigquery-public-data.pet_records.pets`
+    ORDER BY ID DESC;
+
+    SELECT id, name, animal
+    FROM `bigquery-public-data.pet_records.pets`
+    ORDER BY animal
+
+* When ordering, you can choose the rule of order. Either descending DESC or ascending ASC
+* ORDER BY is usually the last clause in a query

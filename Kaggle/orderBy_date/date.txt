@@ -1,0 +1,21 @@
+9/7/26
+Kaggle Learn SQL tutorial
+Course lesson # 4: Date
+
+Date is a very common data type in databases, typically in the format of:
+- DATE : YYYY - [M]M - [D]D
+- DATETIME : Same format as DATE but with time added to the end of it
+
+The EXTRACT function is useful for dates as it allows us to extract certain parts of a date like the
+year, month, day individually. 
+
+    SELECT Name, EXTRACT(DAY from Date) AS Day
+    FROM `bigquery-public-data.pet_records.pet_with_date`;
+
+You can even apply EXTRACT to find the current week of the year:
+
+    SELECT Name, EXTRACT(WEEK from Date) AS week
+    FROM `bigquery-public-data.pet_records.pets_with_dates`;
+
+More external functions that applies to DATE:
+https://docs.cloud.google.com/bigquery/docs/reference/legacy-sql#syntax-datetime

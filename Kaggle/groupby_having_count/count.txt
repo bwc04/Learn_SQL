@@ -21,3 +21,13 @@ then, it will be named f0...fn.
 
     SELECT COUNT(ID) AS numIds
     FROM `youtube.youtube_ads_revenue`;
+
+* When using COUNT consider if you want to count the number or rows or the frequency of a value that appears in 
+a column. Cost becomes a problem when dealing with large datasets, so using count efficiently is crucial
+
+ - When counting number of rows, use COUNT(*). It cheaper as it doesn't need to read any column data. It can be performed
+ with block metadata
+ - When you need to count the frequency of a value in a column, use COUNT(column_name). It will ignore null values. Will be more
+ expensive as it actually needs to read the column data.
+ - DISTINCT can be used to find the number of distinct values in a column
+ 
