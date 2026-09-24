@@ -1,4 +1,4 @@
-9/4/26
+9/21/26
 Kaggle Learn SQL tutorial
 Course step #6: Joins
 

@@ -1,0 +1,13 @@
+9/24/26
+Kaggle Learn SQL tutorial
+Course step #6: where like
+
+A WHERE clause can limit results in the final output. When WHERE is used with the LIKE clause,
+you can limit to rows only with matching text to the LIKE CLAUSE.
+
+    SELECT *
+    FROM `bigquer-public-data.record_pets`
+    WHERE Name LIKE 'Ripley';
+
+% can also be used to indicate a speace for any number of characters, so you can find rows with values
+that hold a certain group of characters. 
